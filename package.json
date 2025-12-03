@@ -1,20 +1,25 @@
 {
   "name": "vendor-c-api",
   "version": "1.0.0",
-  "description": "API Vendor C untuk Banyuwangi Marketplace",
-  "main": "src/index.js",
+  "description": "// const express = require('express');\r // const cors = require('cors');",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-/issues"
+  },
+  "homepage": "https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=16"
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
   }
 }
