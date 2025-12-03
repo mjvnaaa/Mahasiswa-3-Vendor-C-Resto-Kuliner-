@@ -1,25 +1,28 @@
 {
   "name": "vendor-c-api",
   "version": "1.0.0",
-  "description": "// const express = require('express');\r // const cors = require('cors');",
-  "main": "server.js",
+  "description": "API Vendor C - Resto & Kuliner untuk Ujian Interopabilitas",
+  "main": "services.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node services.js",
+    "dev": "nodemon services.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api", "vendor-c", "resto", "kuliner", "interopabilitas"],
+  "author": "Nama Anda",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-/issues"
   },
   "homepage": "https://github.com/mjvnaaa/Mahasiswa-3-Vendor-C-Resto-Kuliner-#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.2.1"
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
