@@ -1,60 +1,58 @@
 const express = require('express');
 const app = express();
-// Gunakan port 3003 agar tidak bentrok
 const port = 3000;
 
 const products = [
     {
         id: 501,
         details: {
-            name: "Nasi Tempong",
+            name: "Sego Tempong",
             category: 'Food'
         },
         pricing: {
-            base_price: 20000,
-            tax: 2000
+            base_price: 25000,
+            tax: 2500
         },
         stock: 50
     },
     {
         id: 502,
         details: {
-            name: "Es Teh Manis",
-            category: 'Drink'
+            name: "Rujak Soto",
+            category: 'Food'
         },
         pricing: {
-            base_price: 5000,
-            tax: 500
+            base_price: 20000,
+            tax: 2000
         },
-        stock: 100
+        stock: 35
     },
     {
         id: 503,
         details: {
-            name: "Sate Ayam",
+            name: "Pecel Rawon",
             category: 'Food'
         },
         pricing: {
-            base_price: 15000,
-            tax: 1500
+            base_price: 22000,
+            tax: 2200
         },
-        stock: 30
+        stock: 25
     },
     {
         id: 504,
         details: {
-            name: "Jus Jambu",
+            name: "Kopi Osing",
             category: 'Drink'
         },
         pricing: {
-            base_price: 12000,
-            tax: 1200
+            base_price: 10000,
+            tax: 1000
         },
-        stock: 20
+        stock: 60
     }
 ];
 
-// Root endpoint untuk dokumentasi
 app.get('/', (req, res) => {
     res.json({
         message: 'Vendor C API - Resto & Kuliner',
@@ -66,13 +64,11 @@ app.get('/', (req, res) => {
     });
 });
 
-// GET /api/products - semua produk
 app.get('/api/products', (req, res) => {
     console.log(`[Vendor C] GET /api/products - ${new Date().toLocaleTimeString()}`);
     res.json(products);
 });
 
-// GET /api/products/:id - produk berdasarkan ID
 app.get('/api/products/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const item = products.find(p => p.id === id);
@@ -87,10 +83,9 @@ app.get('/api/products/:id', (req, res) => {
     res.json(item);
 });
 
-// Jalankan server
 app.listen(port, () => {
-    console.log(`🚀 Vendor C API berjalan di: http://localhost:${port}`);
-    console.log(`📦 Total produk: ${products.length}`);
+    console.log(`Vendor C API berjalan di: http://localhost:${port}`);
+    console.log(`Total produk: ${products.length}`);
 });
 
 module.exports = app;
