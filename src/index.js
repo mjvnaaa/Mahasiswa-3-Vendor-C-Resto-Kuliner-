@@ -24,19 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/products', (req, res) => {
-  let filteredProducts = [...products];
-
-  if (req.query.category) {
-    filteredProducts = filteredProducts.filter(
-      p => p.details.category.toLowerCase() === req.query.category.toLowerCase()
-    );
-  }
-
-  if (req.query.in_stock === 'true') {
-    filteredProducts = filteredProducts.filter(p => p.stock > 0);
-  }
-
-  res.json(filteredProducts);
+  res.json(products);
 });
 
 app.get('/api/products/:id', (req, res) => {
@@ -62,11 +50,7 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('='.repeat(50));
-  console.log('VENDOR C API DENGAN DATA LENGKAP');
-  console.log('='.repeat(50));
-  console.log(`Total produk: ${products.length}`);
+  console.log('VENDOR C API BERJALAN');
   console.log(`URL: http://localhost:${PORT}`);
   console.log(`Endpoint: http://localhost:${PORT}/api/products`);
-  console.log('='.repeat(50));
 });
